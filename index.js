@@ -42,7 +42,10 @@ $('button').on('click', function () {
  $('ul').on('click', 'a', function () {
  	event.preventDefault()
  	$('.data').hide()
- 	$('.permissions').show().html("<h3>This user's permissions are:</h3>")
+ 	var name = $(this).closest('li').text()
+ 	var nameArray = name.split(" ")
+ 	var fname = nameArray[1]
+ 	$('.permissions').show().html("<h3>"+fname + "'s permissions are:</h3>")
  	var idNum = $(this).closest('li').data('id')  
  	$.get('http://localhost:3000/permissions').done(function (perms) {
  		perms.forEach(function (perm) {
