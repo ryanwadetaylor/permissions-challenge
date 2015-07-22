@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Permissions</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+<script src="index.js"></script>
+<link rel="stylesheet" href="styles.css">
+
+<script id="user-template" type="text/x-handlebars-template">
+	<li data-id="{{ user.id }}"> {{ user.name }} <a href="#">Get permissions</a> </li>
+</script>
+
+<script id="perm-template" type="text/x-handlebars-template">
+
+	<li> {{ perm }}  </li>
+</script>
+
+</head>
+<body>
+	<button>Get Users</button>
+
+	<ul class="data"></ul>
+
+	<div class="permissions"></div>
+
+</body>
+</html>
